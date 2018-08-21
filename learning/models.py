@@ -1,6 +1,10 @@
 from django.db import models
 
 
+### for dumping and loading see : 
+### https://stackoverflow.com/questions/6153113/how-to-create-a-fixture-file
+
+
 class Course(models.Model):
     name = models.CharField(max_length=512)
     description = models.TextField()
