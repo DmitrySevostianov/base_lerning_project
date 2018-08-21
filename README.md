@@ -1,6 +1,6 @@
 # base_lerning_project
 
-- Goaul:
+- Goal:
 
 educational project for education =)
  
