@@ -3,7 +3,7 @@
 
 {% block title %}
 
-	<title> About </title>
+	<title> About "learning" app </title>
 
 {% endblock %}
 
@@ -11,12 +11,14 @@
 
 {% block content %}
 
-      <h1> Hello from about page </h1>
-
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>We use bootstrap starter template</h1>
+
+        <p class="lead"> <b> Note 1: </b> to upload data to Course and Lesson models use <br> $ python manage.py loaddata fixtures/learning.json --app learning </p>
+
+        <p class="lead"> <b> Note 2: </b> to store data from Course and Lesson models use <br> $ python manage.py dumpdata learning > fixtures/learning.json </p>
+
       </div>
 
 

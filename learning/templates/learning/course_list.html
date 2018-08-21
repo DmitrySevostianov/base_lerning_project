@@ -12,24 +12,32 @@
 {% block content %}
 	
 
-	<ul>
-
-		{% for course in object_list %}
-
-		
-			<li>
-		           <h3>
-			      <a href="{% url 'learning:course_detail' course.slug %}"> {{ course.name }} </a>
-			   </h3>
-			</li>
-			
-
-		{% endfor %}
-		
-		
+	{% if object_list != None %}
 	
-	</ul>
+		<ul>
+			{% for course in object_list %}
+				<li>
+			         <h3>
+				      <a href="{% url 'learning:course_detail' course.slug %}"> 
+				      	{{ course.name }} 
+				      </a>
+				   </h3>
+				</li>
+			{% endfor %}		
+		</ul>
 
+
+	{% else %}
+
+		<div class="starter-template">
+
+	        <h1>No items in models</h1>
+
+	        <p class="lead"> <b> Note : </b> to upload data to Course and Lesson models use <br> $ python manage.py loaddata fixtures/learning.json --app learning </p>
+
+	    </div>
+
+     {% endif %}
 
 
 {% endblock %}
