@@ -1,26 +1,49 @@
 # base_lerning_project
 
-- Goal:
+- Цель проекта:
 
-educational project for education =)
+Образовательная. Это тренировочный проект созданный для наработки навыков создания приложений на Django.
+Также частью проекта будет SPA на React.
+
+
+- Описание
+  В данном проекте предполагается реализация образовательного ресурса, предоставляющего возможности для проведения занятий по учебным курсам.
+  Для учеников преполагается создание и ведение конспекта по каждому курсу.
+  На данный момент в проекте 2 приложения:
+  
+```sh
+   users
+   learning
+ ``` 
+   users отвечает за аутентификацию пользователей и за модификацию модели пользователя, в частности в качестве USERNAME_FIELD выбран email \n
+   learning отвечает за отображение списка курсов и списков уроков для каждого курса. В дальнейшем в этом приложении может появиться дополнительный функционал.
  
-- Installation:
+    
+- Установка:
 
-  $ git clone ..
+Скачиваем проект
+```sh
+git clone ..
+```
+  создаем виртуального окружение:
+```sh
+venv myvenv
+```
+  устанавливаем необходимые модули
+```sh
+pip install -r requirements.txt
+```
+загружем тестовые примеры курсов и уроков ( выбраны примеры с Raspberry Pi и мокроконтроллерами )
+```sh
+python manage.py loaddata fixtures/learning.json --app learning
+``` 
 
-(if needed venv)  
-  
-  $ venv myvenv
+Запуск 
 
-  $ pip install -r requ...
-
-to add test courese example
-
-  $ python manage.py loaddata fixtures/learning.json --app learning
-  
-- Usage:
-  ...
-  
+```sh
+python manage.py runserver
+```
+   
   
   
 
