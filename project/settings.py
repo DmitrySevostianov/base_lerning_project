@@ -1,6 +1,4 @@
-
 import os
-
 from configurations import Configuration
 
 class Base(Configuration):
@@ -103,7 +101,5 @@ class Base(Configuration):
 class Dev(Base):
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'et&++9@(4i&a+6!#r6%8sr&6k@$py)85cnkde+&*x25emu)^*1'
-
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
-
