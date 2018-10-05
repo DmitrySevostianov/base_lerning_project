@@ -19,6 +19,7 @@ class CourseList(ListView):
 
 class CourseDetail(DetailView):
     model = Course
+    queryset = Course.objects.all()
     
     def get_context_data(self, **kwargs):
         
@@ -28,9 +29,6 @@ class CourseDetail(DetailView):
         context['lessons_list'] = Lesson.objects.filter(course=self.course)
         
         return context
-    
-    queryset = Course.objects.all()
-    
 
 
 class LessonDetail(DetailView):
